@@ -43,145 +43,157 @@ h1 {
 }
 
 #ticket {
-  background-color: white;
-  border-radius: 24px;
   margin-top: 2rem;
-  padding: 2.4rem 3.2rem;
   filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
   -webkit-filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
-  .top:;
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  -ms-border-radius: 24px;
-  -o-border-radius: 24px;
-{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2.4rem;
 
-    p {
-      font-size: 1.4rem;
-      color: rgba(0, 0, 0, 0.64);
-    }
-
-    .flight {
+  section {
+    background-color: white;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    &.top {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      padding: 2.4rem 3.2rem;
+      border-radius: 24px 24px 0 0;
+      --mask: radial-gradient(1.2rem at 1.2rem bottom, transparent 95%, black) -1.2rem;
+      -webkit-mask-repeat: repeat-x;
+      mask-repeat: repeat-x;
+      p{
+        font-size: 1.4rem;
+        color: rgba(0, 0, 0, 0.64);
+      }
 
-      .date p {
-        text-align: right;
+      .flight {
+        display: flex;
+        justify-content: space-between;
+
+        .date p {
+          text-align: right;
+        }
+      }
+
+      .path {
+        margin-top: 2.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        strong {
+          display: block;
+          font-weight: 500;
+          font-size: 4rem;
+          line-height: 4.7rem;
+        }
+
+        .arrival {
+
+          p,
+          strong,
+          time {
+            display: block;
+            text-align: right;
+          }
+        }
       }
     }
 
-    .path {
-      margin-top: 2.4rem;
+    &.middle {
+      --mask: radial-gradient(1.2rem at 1.2rem 1.2rem, transparent 95%, black) -1.2rem -1.2rem;
+     
+      border: 1px dashed rgba(0, 0, 0, 0.32);
+      padding: 2.4rem 3.2rem;
+      border-left: 0;
+      border-right: 0;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      strong {
-        display: block;
-        font-weight: 500;
-        font-size: 4rem;
-        line-height: 4.7rem;
-      }
-
-      .arrival {
-
-        p,
-        strong,
-        time {
-          display: block;
-          text-align: right;
-        }
+      p {
+        font-size: 1.4rem;
+        color: rgba(0, 0, 0, 0.64);
       }
     }
-  }
 
-  .middle {
-    padding: 2.4rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    &.bottom {
+      --mask: radial-gradient(1.2rem at 1.2rem top, transparent 95%, black) -1.2rem;;
+      -webkit-mask-repeat: repeat-x;
+      mask-repeat: repeat-x;
 
-    p {
-      font-size: 1.4rem;
-      color: rgba(0, 0, 0, 0.64);
-    }
-  }
+      border-radius: 0 0 24px 24px;
+      padding: 2.4rem 3.2rem;
 
-  .bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: 2.4rem;
-
-
-    .container {
       display: flex;
-      justify-content: space-between;
-      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-      .boarding-info {
-        dl {
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
+      .container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
 
-          dt {
+        .boarding-info {
+          dl {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
 
-            &.boarding{
-              display:flex;
-              flex-direction: column;
-              
+            dt {
 
-              time {
-               
-                border-radius: 8px;
-                background: #633BBC;
+              &.boarding {
+                display: flex;
+                flex-direction: column;
 
-                padding: 0.4rem 0.8rem;
-                color: white;
+                time {
 
-                font-weight: 500;
-                font-size: 1.6rem;
-                text-align: center;
-                line-height: 1.9rem;
+                  border-radius: 8px;
+                  background: #633BBC;
+
+                  padding: 0.4rem 0.8rem;
+                  color: white;
+
+                  font-weight: 500;
+                  font-size: 1.6rem;
+                  text-align: center;
+                  line-height: 1.9rem;
+
+                }
+              }
+
+              p {
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 1.7rem;
+
+                color: rgba(0, 0, 0, 0.64);
 
               }
-            }
-            p {
-              font-weight: 400;
-              font-size: 1.4rem;
-              line-height: 1.7rem;
-
-              color: rgba(0, 0, 0, 0.64);
 
             }
-            
+          }
+        }
+
+        .qrcode {
+
+          margin-left: auto;
+
+          p {
+            font-weight: 400;
+            font-size: 1.3rem;
+            line-height: 1.7rem;
           }
         }
       }
 
-      .qrcode {
-
-        margin-left: auto;
-
-        p {
-          font-weight: 400;
-          font-size: 1.3rem;
-          line-height: 1.7rem;
-        }
+      .atention {
+        margin-top: 2.4rem;
       }
     }
-
-    .atention {
-      margin-top: 2.4rem;
-    }
   }
+
 }
 
 
