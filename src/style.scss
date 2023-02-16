@@ -1,11 +1,12 @@
-*{
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-:root{
+
+:root {
   font-size: 62.5%;
 }
 
@@ -17,90 +18,173 @@ body {
   height: 100vh;
   width: 100vw;
 
- display: grid;
- place-content: center;
+  display: grid;
+  place-content: center;
 }
-h1,strong{
+
+h1,
+strong {
   font-weight: 500;
 }
+
 #boarding-pass {
   max-width: 32.7rem;
-  width:auto;
+  width: auto;
 
   display: flex;
   flex-direction: column;
 }
-h1{
+
+h1 {
   font-size: 2rem;
   line-height: 2.4rem;
-  color:white;
+  color: white;
   text-align: center;
 }
 
-#ticket{
+#ticket {
   background-color: white;
-
   border-radius: 12px;
   margin-top: 2rem;
   padding: 2.4rem 3.2rem;
   filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
-}
+  -webkit-filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
 
-.top{
-  display:flex;
-  flex-direction: column;
-  margin-bottom: 2.4rem;
-  p{
-    font-size: 1.4rem;
-    color: rgba(0, 0, 0, 0.64);
-  }
+  .top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.4rem;
 
-  .flight{
-    display:flex;
-    justify-content: space-between;
-
-    .date p{
-      text-align: right;
-    }
-  }
-
-  .path{
-    margin-top:2.4rem;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-
-    strong{
-      display:block;
-      font-weight: 500;
-      font-size: 4rem;
-      line-height: 4.7rem;
+    p {
+      font-size: 1.4rem;
+      color: rgba(0, 0, 0, 0.64);
     }
 
-    .arrival{
-      p,strong,time{
-        display: block;
+    .flight {
+      display: flex;
+      justify-content: space-between;
+
+      .date p {
         text-align: right;
       }
     }
+
+    .path {
+      margin-top: 2.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      strong {
+        display: block;
+        font-weight: 500;
+        font-size: 4rem;
+        line-height: 4.7rem;
+      }
+
+      .arrival {
+
+        p,
+        strong,
+        time {
+          display: block;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .middle {
+    padding: 2.4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-size: 1.4rem;
+      color: rgba(0, 0, 0, 0.64);
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2.4rem;
+
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .boarding-info {
+        dl {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+          dt {
+
+            &.boarding{
+              display:flex;
+              flex-direction: column;
+              
+
+              time {
+               
+                border-radius: 8px;
+                background: #633BBC;
+
+                padding: 0.4rem 0.8rem;
+                color: white;
+
+                font-weight: 500;
+                font-size: 1.6rem;
+                text-align: center;
+                line-height: 1.9rem;
+
+              }
+            }
+            p {
+              font-weight: 400;
+              font-size: 1.4rem;
+              line-height: 1.7rem;
+
+              color: rgba(0, 0, 0, 0.64);
+
+            }
+            
+          }
+        }
+      }
+
+      .qrcode {
+
+        margin-left: auto;
+
+        p {
+          font-weight: 400;
+          font-size: 1.3rem;
+          line-height: 1.7rem;
+        }
+      }
+    }
+
+    .atention {
+      margin-top: 2.4rem;
+    }
   }
 }
 
-.middle{
-  padding: 2.4rem 0;
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  
-  p{
-    font-size: 1.4rem;
-    color: rgba(0, 0, 0, 0.64);
-  }
-}
-footer{
+
+footer {
   margin-top: 2rem;
 
-  font-size:1.4rem;
+  font-size: 1.4rem;
   line-height: 2.4rem;
   font-weight: 400;
 
@@ -108,4 +192,3 @@ footer{
   opacity: 0.64;
   text-align: center;
 }
-

@@ -29,8 +29,8 @@ function App() {
                   <img src={AirPlaneImg} alt="" />
                 </div>
                 <div className="arrival">
-                  <p>Orlando, EUA</p>
-                  <strong>ORL</strong>
+                  <p>Guanajuato, MEX</p>
+                  <strong>GUA</strong>
                   <time>03:55</time>
                 </div>
               </div>
@@ -49,7 +49,7 @@ function App() {
               <div className="container">
                 <div className="boarding-info">
                   <dl>
-                    <dt>
+                    <dt className='boarding'>
                       <p>Embarque</p>
                       <time>16:15</time>
                     </dt>
@@ -64,11 +64,11 @@ function App() {
                   </dl>
                 </div>
                 <div className="qrcode">
-                  <QRCodeSVG value="https://reactjs.org/" />,
+                  <QRCodeSVG value="https://reactjs.org/" />
                   <p>Grupo de embarque 3</p>
                 </div>
               </div>
-              <p><strong>Atenção:</strong> o portão fecha 16:45</p>
+              <p className='atention'><strong>Atenção:</strong> o portão fecha 16:45</p>
             </section>
 
           </main>
